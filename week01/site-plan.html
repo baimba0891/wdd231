@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sierra Leone Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Sierra Leone Chamber</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Welcome to the Sierra Leone Chamber of Commerce</h1>
+    <p>Promoting local businesses, fostering growth, and building community.</p>
+    <a href="membership.html" class="cta">Join Now</a>
+  </section>
+  <main>
+    <section class="cards">
+      <div class="card">
+        <h2>Events</h2>
+        <p>Discover upcoming workshops and networking opportunities.</p>
+        <a href="events.html" class="cta">View Events</a>
+      </div>
+      <div class="card">
+        <h2>Directory</h2>
+        <p>Explore local businesses and services in Sierra Leone.</p>
+        <a href="directory.html" class="cta">Browse Directory</a>
+      </div>
+      <div class="card">
+        <h2>Resources</h2>
+        <p>Access guides, articles, and economic development info.</p>
+        <a href="resources.html" class="cta">View Resources</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Sierra Leone Chamber of Commerce | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

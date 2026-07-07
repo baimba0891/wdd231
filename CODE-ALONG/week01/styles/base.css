@@ -1,0 +1,46 @@
+
+terra  cotta #E07A5F
+deep slate blue #3D4058,
+
+
+*{
+    font-family: "Joslin Sans", sans-sarif;
+    box-sizing: border-box;
+}
+
+header {
+display: grid;
+grid-template-columns: 24px auto 44px;
+padding: 5px 5px 0 10px;
+align-items: end;
+border-bottom: solid 1px hsl(0, 32%, 85%);
+column-gap: 20px;
+
+}
+
+header img {
+    display: block;
+    width: 30px;
+    height: auto;
+}
+
+header span {
+    font-size: 1.5rem;
+    color: #3D4058;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color:#3D4058 ;
+    cursor: pointer;
+}
+
+.hamburger::after {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger .show ::after {
+   content: "\00D7";
+}
