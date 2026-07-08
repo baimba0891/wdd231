@@ -1,0 +1,35 @@
+@media screen and (min-width:768px){
+
+#menu{
+display:none;
+}
+
+.navigation{
+display:flex;
+gap:20px;
+}
+
+.navigation li{
+background:none;
+padding:0;
+}
+
+.top-grid{
+grid-template-columns:1.5fr 1fr;
+}
+
+#courses{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+
+larger.css
+@media screen and (min-width:768px){
+
+.course-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}

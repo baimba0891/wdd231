@@ -1,12 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wdd231 first paget</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home | Augustine Musa Baimba wdd231 Course Home Page</title>
+
+<meta name="description" content="WDD231 Home Page">
+<meta name="author" content="Augustine Musa Baimba">
+
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/dates.js" defer></script>
+<script src="scripts/courses.js" defer></script>
+
 </head>
+
 <body>
-    <h1>Welcome to my first page in web fronted development.</h1>
-    
+
+<header>
+
+<div class="logo">
+<img src="images/logo1.svg" alt="Site Logo" width="60">
+<span>Augustine Baimba</span>
+</div>
+
+<button id="menu">&#9776;</button>
+
+<nav>
+<ul class="navigation">
+
+<li><a href="index.html" class="active">Home</a></li>
+
+<li><a href="chamber/index.html">Chamber</a></li>
+
+<li><a href="final/index.html">Final</a></li>
+
+</ul>
+</nav>
+
+</header>
+
+<main>
+
+<h1>Home</h1>
+
+<div class="top-grid">
+
+<section>
+
+<h2>About Me</h2>
+
+<p>
+ My name is Augustine Baimba, from Sierra Leone currently residing in the capital city, Freetown. 
+ I am a member of the church of Jesus Christ of Latter Day saints.
+ I am married and currently pusuing a degree in Software Development online with 
+ Brigham Young University, Idaho, United Staes of America. On this my home page, 
+ I want all readers to click on the link to the Sierra Chamber of Commerce
+ to learn more about that great organisation.
+</p>
+
+</section>
+
+<section>
+
+<h2>My Photo</h2>
+
+<img src="images/augustineb.JPG" alt="Author photo">
+
+</section>
+
+</div>
+
+<section class="certificate">
+
+    <h2>Web and Computer Programming Certificate</h2>
+
+    <div class="course-buttons">
+        <button id="all">All Courses</button>
+        <button id="wdd">WDD Courses</button>
+        <button id="cse">CSE Courses</button>
+    </div>
+
+    <p class="credits">
+        The total number of credits listed below is
+        <span id="credits"></span>
+    </p>
+
+    <div id="courses" class="course-grid"></div>
+
+</section>
+</main>
+
+<footer>
+
+<div class="social">
+
+<a href="https://github.com/baimba0891">GitHub</a>
+
+<a href="https://linkedin.com/in/augustine-musa-baimba-51b37110a">LinkedIn</a>
+
+<a href="#">X</a>
+
+</div>
+
+<p>
+©
+<span id="currentyear"></span>
+Augustine Baimba | Sierra Leone.
+</p>
+
+<p id="lastModified"></p>
+
+</footer>
+
 </body>
 </html>
