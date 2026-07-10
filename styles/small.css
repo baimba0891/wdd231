@@ -43,7 +43,7 @@ display:block;
 }
 
 .navigation li{
-background:#333;
+background: navy;
 padding:.8rem;
 }
 
@@ -54,11 +54,11 @@ display:block;
 }
 
 .navigation a:hover{
-background:#666;
+background:navy;
 }
 
 .active{
-background:#555;
+background:navy;
 }
 
 main{
@@ -71,7 +71,7 @@ gap:1rem;
 }
 
 section{
-border:1px solid #ccc;
+border:1px solid yellow;
 padding:1rem;
 }
 
@@ -108,7 +108,7 @@ gap:10px;
 
 .course{
 padding:1rem;
-background:#ddd;
+background:whitesmoke;
 text-align:center;
 }
 
@@ -120,7 +120,9 @@ color:white;
 footer{
 text-align:center;
 padding:2rem;
-background-color: whitesmoke
+background-color: oldlace;
+color: black;
+font: 400;
 }
 
 .social{
@@ -142,7 +144,7 @@ margin-bottom:1rem;
 }
 
 .course-buttons button{
-    background:hsl(16, 85%, 58%);
+    background: navy;
     color:white;
     border:none;
     padding:.8rem 1.5rem;
@@ -152,7 +154,7 @@ margin-bottom:1rem;
 }
 
 .course-buttons button:hover{
-    background:hsl(16, 85%, 58%);
+    background:navy;
 }
 
 .course-grid{
@@ -170,7 +172,7 @@ margin-bottom:1rem;
 }
 
 .not-completed{
-    background:hsl(16, 85%, 58%);
+    background:navy;
     color:white;
 }
 
