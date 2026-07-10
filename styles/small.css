@@ -142,7 +142,7 @@ margin-bottom:1rem;
 }
 
 .course-buttons button{
-    background:#d97852;
+    background:hsl(16, 85%, 58%);
     color:white;
     border:none;
     padding:.8rem 1.5rem;
@@ -152,7 +152,7 @@ margin-bottom:1rem;
 }
 
 .course-buttons button:hover{
-    background:#b85d3d;
+    background:hsl(16, 85%, 58%);
 }
 
 .course-grid{
@@ -169,18 +169,17 @@ margin-bottom:1rem;
     font-size:1.2rem;
 }
 
-.completed{
-    background:#f4eed4;
-    color:#222;
-}
-
 .not-completed{
-    background:#d97852;
+    background:hsl(16, 85%, 58%);
     color:white;
 }
 
 .credits{
     margin-top:1rem;
     font-size:1.1rem;
+}
+
+h1 {
+    text-align: center;
 }
 
