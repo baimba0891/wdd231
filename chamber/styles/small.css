@@ -1,0 +1,62 @@
+
+body {
+  background-color: #f9f9f9;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #006644;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+ footer {
+  background-color: #004466;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0.5em 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#directory {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+
+.member-card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.member-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
