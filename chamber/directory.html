@@ -1,10 +1,11 @@
-<<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Sierra Leone Chamber of Commerce - Directory</title>
-  <meta name="description" content="Business Directory of the Sierra Leone Chamber of Commerce">
+  <meta name="description" content="Business Directory of the Sierra Leone Chamber of Commerce, 
+   where you can find some of the businesses who are members and their information">
   <meta name="author" content="Augustine Musa Baimba">
 
  <link rel="icon" href="favicon.ico">
@@ -17,10 +18,16 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
+  <head>
+  <script src="scripts/menu.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+</head>
+
 
 </head>
 <body>
-  <header>
+   <main>
+      <header>
     <h1>The Sierra Leone Chamber of Commerce</h1>
     <nav>
       <button id="menu-toggle">☰ Menu</button>
@@ -34,9 +41,9 @@
         <li><a href="events.html">Events</a></li>
       </ul>
     </nav>
-  </header>
+   </header>
 
-  <main>
+ 
     <h2>Business Directory</h2>
     <div class="view-buttons">
       <button id="grid-view">Grid</button>
@@ -54,7 +61,5 @@
     <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 
-  <script src="scripts/menu.js"></script>
-  <script src="scripts/directory.js"></script>
 </body>
 </html>
