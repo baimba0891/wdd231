@@ -10,11 +10,11 @@ function displayMembers(members) {
 
   members.forEach(member => {
     const card = document.createElement('div');
-    card.classList.add('card');
+    card.classList.add('member-card');
     card.innerHTML = `
       <img src="images/${member.image}" alt="${member.name}">
       <h3>${member.name}</h3>
-      <p>${member.tagline}</p>
+      <p>${member.tagline || ''}</p>
       <p>Email: ${member.email}</p>
       <p>Phone: ${member.phone}</p>
       <p><a href="${member.website}" target="_blank">${member.website}</a></p>
@@ -24,16 +24,19 @@ function displayMembers(members) {
   });
 }
 
-document.getElementById('grid-view').addEventListener('click', () => {
-  document.getElementById('directory').classList.add('grid');
-  document.getElementById('directory').classList.remove('list');
+// Toggle buttons
+const gridBtn = document.getElementById('grid-view');
+const listBtn = document.getElementById('list-view');
+const directory = document.getElementById('directory');
+
+gridBtn.addEventListener('click', () => {
+  directory.classList.add('grid');
+  directory.classList.remove('list');
 });
 
-document.getElementById('list-view').addEventListener('click', () => {
-  document.getElementById('directory').classList.add('list');
-  document.getElementById('directory').classList.remove('grid');
+listBtn.addEventListener('click', () => {
+  directory.classList.add('list');
+  directory.classList.remove('grid');
 });
 
 loadMembers();
-
-

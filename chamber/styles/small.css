@@ -4,6 +4,7 @@ body {
   color: #333333;
   padding: 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -13,7 +14,7 @@ header {
   padding: 1em;
 }
 
- footer {
+footer {
   background-color: #004466;
   color: white;
   text-align: center;
@@ -33,6 +34,12 @@ nav ul li {
 nav a {
   color: white;
   text-decoration: none;
+}
+
+nav a.active {
+  color: #ffcc00;
+  font-weight: bold;
+  border-bottom: 2px solid #ffcc00;
 }
 
 .hidden {
@@ -60,3 +67,25 @@ nav a {
   border-radius: 4px;
 }
 
+/* Grid/List Toggle */
+#directory.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+}
+
+#directory.list {
+  display: block;
+}
+
+#directory.list .member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+#directory.list .member-card img {
+  display: none;
+}
