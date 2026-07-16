@@ -4,8 +4,7 @@ export function setSectionSelection(sections) {
   sections.forEach(section => {
     const option = document.createElement("option");
     option.value = section.sectionNumber;
-    option.textContent = `Section ${section.sectionNumber}`;
+    option.textContent = `Section ${section.sectionNumber} – ${section.instructor}`;
     selectElement.appendChild(option);
   });
 }
-
