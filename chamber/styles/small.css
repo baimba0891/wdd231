@@ -37,11 +37,10 @@ nav a {
 }
 
 nav a.active {
-  color: #ffcc00;
+  color: #FFD700;
+  border-bottom: 3px solid #FFD700;
   font-weight: bold;
-  border-bottom: 2px solid #ffcc00;
 }
-
 .hidden {
   display: none;
 }

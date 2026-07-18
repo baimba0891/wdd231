@@ -1,67 +1,102 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Freetown Chamber of Commerce | Home</title>
-  <meta name="description" content="Welcome to the Freetown Chamber of Commerce. Connect with local businesses, explore upcoming events, and join our growing community.">
-  <meta property="og:title" content="Freetown Chamber of Commerce">
-  <meta property="og:description" content="Discover events, weather updates, and member spotlights from the Freetown Chamber of Commerce.">
-  <meta property="og:url" content="https://yourdomain.com/index.html">
-  <meta property="og:image" content="https://yourdomain.com/images/og-image.png">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles/base.css">
-  <script src="scripts/include.js" defer></script>
-  <script src="scripts/home.js" defer></script>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
-  
- <script src="scripts/include.js" defer></script>
-  <script src="scripts/menu.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freetown Chamber of Commerce | Home</title>
+    <meta name="description" content="Freetown Chamber of Commerce - Connecting businesses 
+        and fostering growth in Freetown, Sierra Leone.">
+    <meta name="author" content="Augustine Baimba">
+    <meta property="og:title" content="Freetown Chamber of Commerce">
+    <meta property="og:description" content="Join the Freetown Chamber and grow your business 
+        with networking, advocacy and community events.">
+    <meta property="og:image" content="images/hero-freetown.webp">
+    <meta property="og:url" content="https://yourdomain.com/chamber/">
+    
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
-  <!-- Injected header -->
-  <header id="header"></header>
+    <header>
+        <div class="header-top">
+            <img src="images/favicon.ico" alt="Freetown Chamber Logo" width="60" height="60">
+            <div>
+                <h1>Freetown</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+            <button id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+        </div>
+        <nav>
+            <ul id="menu" class="hidden">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <img src="images/hero.jpg" alt="Freetown Skyline">
-      <div class="hero-text">
-        <h1>Welcome to the Chamber</h1>
+    <main>
+        FCC
+<section class="hero">
+    <img src="images/freetown-city.webp" alt="Freetown business district" width="1200" height="600">
+    <div class="hero-content">
+        <h2>Building Business. Building Community.</h2>
         <a href="join.html" class="cta-button">Join the Chamber</a>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Events -->
-    <section class="events">
-      <h2>Upcoming Events</h2>
-      <article>
-        <h3>Business Networking Night</h3>
-        <p>July 25, 2026 — Connect with local entrepreneurs.</p>
-      </article>
-      <article>
-        <h3>Small Business Workshop</h3>
-        <p>August 10, 2026 — Learn strategies to grow your business.</p>
-      </article>
-    </section>
+        <div class="home-grid">
+            <section class="card events">
+                <h2>Upcoming Events</h2>
+                <div class="event-item">
+                    <h3>🤝 Business Networking Breakfast</h3>
+                    <p><strong>July 25 - 8:00 AM</strong> @ Freetown City Hall</p>
+                    <p>Connect with over 100 local business owners. Free for members.</p>
+                </div>
+                <div class="event-item">
+                    <h3>📈 Small Business Growth Workshop</h3>
+                    <p><strong>Aug 02 - 2:00 PM</strong> @ Chamber Office</p>
+                    <p>Learn marketing and financing strategies for 2026.</p>
+                </div>
+                <a href="discover.html">More Events...</a>
+            </section>
 
-    <!-- Weather -->
-    <section class="weather">
-      <h2>Local Weather</h2>
-      <div id="weather-data"></div>
-    </section>
+            <section class="card weather">
+                <h2>Weather in Freetown</h2>
+                <div id="weather-current">
+                    <img id="weather-icon" src="" alt="">
+                    <p><span id="current-temp"></span></p>
+                    <p id="weather-desc" class="capitalize"></p>
+                </div>
+                <div id="forecast" class="forecast-grid"></div>
+                <p class="weather-credit"><small>Data from OpenWeatherMap</small></p>
+            </section>
+            <section class="spotlights">
+                <h2>Member Spotlights</h2>
+                <div id="spotlight-container" class="spotlight-grid"></div>
+            </section>
+        </div>
+    </main>
 
-    <!-- Spotlights -->
-    <section class="spotlights">
-      <h2>Member Spotlights</h2>
-      <div id="spotlight-container"></div>
-    </section>
-  </main>
+    <footer>
+        <div class="footer-info">
+            <p><strong>Freetown Chamber of Commerce</strong></p>
+            <p>10 Wallace Johnson Street, Freetown, SL</p>
+            <p>info@freetowncc.sl | +232 76 123 456</p>
+        </div>
+        <div class="footer-meta">
+            <p>&copy; <span id="year"></span> Freetown Chamber of Commerce</p>
+            <p>Augustine Baimba | WDD 230 Project</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
 
-  <!-- Injected footer -->
-  <footer id="footer"></footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlight.js"></script>
 </body>
 </html>

@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Sierra Leone Chamber of Commerce - Directory</title>
-  <meta name="description" content="Business Directory of the Sierra Leone Chamber of Commerce,
-   where you can find some of the businesses who are members and their information">
-  <meta name="author" content="Augustine Musa Baimba">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Directory | Freetown Chamber of Commerce</title>
+<meta name="description" content="Freetown Chamber Member Directory">
+<meta name="author" content="Augustine Baimba">
 
-  <meta property="og:title" content="The Sierra Leone Chamber of Commerce">
-  <meta property="og:description" content="Explore the Sierra Leone Chamber of Commerce Business Directory">
-  <meta property="og:image" content="images/og-image.png">
-  <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
-
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
-  
- <script src="scripts/include.js" defer></script>
-  <script src="scripts/menu.js" defer></script>
-  <script src="scripts/directory.js" defer></script>
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/larger.css">
+<style>
+.view-toggle{text-align:center;margin:1rem;}
+.view-toggle button{padding:.5rem 1rem;margin:.2rem;background:#0a3d62;color:white;border:none;cursor:pointer;border-radius:4px;}
+.view-toggle button.active{background:#f6b93b;color:#0a3d62;}
+#directory.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;padding:1rem;}
+#directory.list{display:flex;flex-direction:column;gap:.5rem;padding:1rem;}
+#directory.list .dir-card{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;align-items:center;text-align:left;padding:.5rem 1rem;}
+#directory.list .dir-card img{display:none;}
+.dir-card{background:white;padding:1rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.1);text-align:center;border-top:4px solid #079992;}
+.dir-card img{width:80px;height:80px;object-fit:contain;margin:0 auto .5rem;display:block;}
+.dir-card h3{color:#0a3d62;margin:.5rem 0;}
+.dir-card a{color:#079992;word-break:break-all;}
+.level-badge{display:inline-block;padding:.2rem .5rem;border-radius:10px;font-size:.75rem;margin-top:.5rem;color:white;}
+.gold{background:gold;color:#333;} .silver{background:silver;color:#333;} .nonprofit{background:#079992;}
+</style>
 </head>
 <body>
-  <main>
-    <header id="header"></header>
-
-    <h2>Business Directory</h2>
-    <div class="view-buttons">
-      <button id="grid-view">Grid</button>
-      <button id="list-view">List</button>
-    </div>
-    <section id="directory" class="grid"></section>
-  </main>
-
-  <footer id="footer"></footer>
+<header><div class="header-top"><img src="images/favicon.ico" alt="Logo" width="60" height="60"><div><h1>Freetown</h1><p>Chamber of Commerce</p></div><button id="menu-toggle" aria-expanded="false">&#9776;</button></div>
+<nav><ul id="menu" class="hidden"><li><a href="index.html">Home</a></li><li><a href="discover.html">Discover</a></li><li><a href="directory.html" class="active">Directory</a></li><li><a href="join.html">Join</a></li></ul></nav></header>
+<main>
+<h2 style="text-align:center;margin:1rem;color:#0a3d62;">Member Directory</h2>
+<div class="view-toggle"><button id="grid-btn" class="active">Grid</button><button id="list-btn">List</button></div>
+<div id="directory" class="grid"></div>
+</main>
+<footer>div class="footer-info">
+            <p><strong>Freetown Chamber of Commerce</strong></p>
+            <p>10 Wallace Johnson Street, Freetown, SL</p>
+            <p>info@freetowncc.sl | +232 76 123 456</p>
+        </div>
+        <div class="footer-meta">
+            <p>&copy; <span id="year"></span> Freetown Chamber of Commerce</p>
+            <p>Augustine Baimba | WDD 230 Project</p>
+            <p id="lastModified"></p>
+        </div>
+</footer>
+<script src="scripts/main.js"></script>
+<script src="scripts/directory.js"></script>
 </body>
 </html>
+

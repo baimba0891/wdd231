@@ -1,69 +1,60 @@
 {
   "members": [
     {
-      "name": "Africell Sierra Leone",
-      "tagline": "Na Wi Network – Leading Mobile Operator",
-      "email": "info@africell.sl",
-      "phone": "111",
-      "website": "https://www.africell.sl",
-      "image": "africell.png",
+      "name": "Freetown Bakery & Cafe",
+      "address": "12 Siaka Stevens Street, Freetown",
+      "phone": "+232 76 123456",
+      "website": "https://freetownbakery.sl",
+      "image": "images/bakery.webp",
       "membership": "Gold"
     },
     {
-      "name": "Orange Sierra Leone",
-      "tagline": "Trusted Network, Driving Digitalization",
-      "email": "customercare@orange.sl",
-      "phone": "+232 79 000000",
-      "website": "https://www.orange.sl",
-      "image": "orange.png",
+      "name": "Leone Tech Solutions",
+      "address": "45 Wilkinson Road, Freetown",
+      "phone": "+232 77 987654",
+      "website": "https://leonetech.sl",
+      "image": "images/tech.webp",
+      "membership": "Gold"
+    },
+    {
+      "name": "Salone Logistics",
+      "address": "32 Ferry Junction, Freetown",
+      "phone": "+232 78 112233",
+      "website": "https://salonelogistics.sl",
+      "image": "images/logistics.webp",
       "membership": "Silver"
     },
     {
-      "name": "Sierra Leone Produce Marketing Company",
-      "tagline": "Exporting Quality Agricultural Produce",
-      "email": "enquiries@slpmc.sl",
-      "phone": "+232 25 477497",
-      "website": "http://www.slpmc.sl",
-      "image": "slpmb.png",
-      "membership": "Gold"
-    },
-    {
-      "name": "AYV Television",
-      "tagline": "Africa Young Voices – Media Empire",
-      "email": "info@ayvnews.com",
-      "phone": "+232 76 611611",
-      "website": "https://www.ayvnews.com",
-      "image": "ayv.png",
-      "membership": "Gold"
-    },
-    {
-      "name": "Sierra Leone Commercial Bank",
-      "tagline": "The People’s Bank – 100% Government Owned",
-      "email": "info@slcb.com",
-      "phone": "+232 22 222222",
-      "website": "https://www.slcb.com",
-      "image": "slcb.png",
+      "name": "EcoMarket SL",
+      "address": "8 Lumley Beach Road, Freetown",
+      "phone": "+232 79 445566",
+      "website": "https://ecomarketsl.com",
+      "image": "images/ecomarket.webp",
       "membership": "Silver"
     },
-    
     {
-      "name": "Rokel Commercial Bank",
-      "tagline": "Creating Opportunities – Gateway to Banking",
-      "email": "info@rokelbank.sl",
-      "phone": "+232 22 222444",
-      "website": "https://www.rokelbank.sl",
-      "image": "rcb.png",
+      "name": "Mountain View Hotel",
+      "address": "Hill Station, Freetown",
+      "phone": "+232 76 778899",
+      "website": "https://mountainviewhotel.sl",
+      "image": "images/hotel.webp",
       "membership": "Gold"
     },
     {
-      "name": "Guaranty Trust Bank Sierra Leone",
-      "tagline": "Innovative Banking, Customer Focused",
-      "email": "info@gtb.sl",
-      "phone": "+232 22 222555",
-      "website": "http://www.gtb.sl",
-      "image": "gtb.png",
+      "name": "Freetown Fashion House",
+      "address": "25 Aberdeen Road, Freetown",
+      "phone": "+232 78 334455",
+      "website": "https://freetownfashion.sl",
+      "image": "images/fashion.webp",
       "membership": "Silver"
+    },
+    {
+      "name": "Community Builders NGO",
+      "address": "14 Congo Cross, Freetown",
+      "phone": "+232 77 001122",
+      "website": "https://communitybuilders.sl",
+      "image": "images/ngo.webp",
+      "membership": "Non-Profit"
     }
   ]
 }
-
