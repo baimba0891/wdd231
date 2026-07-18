@@ -6,7 +6,9 @@
   --dark: #1e272e;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; 
+  margin: 0; padding: 0; 
+}
 
 body {
   font-family: 'Inter', Arial, sans-serif;
@@ -46,7 +48,9 @@ header {
   margin-top: 1rem;
 }
 
-#menu li { padding: 0.5rem 0; }
+#menu li { 
+  padding: 0.5rem 0; 
+}
 #menu a {
   color: white;
   text-decoration: none;
