@@ -189,3 +189,90 @@ footer {
 
 footer p { margin: 0.2rem 0; }
 
+
+.view-toggle{
+  text-align:center;margin:1rem;
+}
+.view-toggle button{
+  padding:.5rem 1rem;
+  margin:.2rem;
+  background:#0a3d62;
+  color:white;
+  border:none;
+  cursor:pointer;
+  border-radius:4px;
+}
+.view-toggle button.active{
+  background:#f6b93b;
+  color:#0a3d62;
+}
+#directory.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1rem;
+  padding:1rem;
+}
+#directory.list{
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+  padding:1rem;
+}
+#directory.list .dir-card{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  align-items:center;
+  text-align:left;
+  padding:.5rem 1rem;
+}
+#directory.list .dir-card img{
+  display:none;
+}
+.dir-card{
+  background:white;
+  padding:1rem;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,.1);
+  text-align:center;
+  border-top:4px solid #079992;
+}
+.dir-card img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+  margin:0 auto .5rem;
+  display:block;
+}
+.dir-card h3{
+  color:#0a3d62;
+  margin:.5rem 0;
+}
+.dir-card a{
+  color:#079992;
+  word-break:break-all;
+}
+.level-badge{
+  display:inline-block
+  ;padding:.2rem .5rem;
+  border-radius:10px;
+  font-size:.75rem;
+  margin-top:.5rem;
+  color:white;
+}
+.gold{
+  background:gold;
+  color:#333;
+}
+ .silver{
+  background:silver;
+  color:#333;
+}
+ .nonprofit{
+  background:#079992;
+}
+
+.directory-heading{
+  text-align:center;
+  margin:1rem;
+  color:#0a3d62;
+}
