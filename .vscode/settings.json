@@ -1,4 +1,7 @@
 {
     "svg.preview.background": "custom",
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "cSpell.words": [
+        "Baimba"
+    ]
 }
