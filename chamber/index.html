@@ -26,9 +26,7 @@
     <header>
         <div class="header-top">
             <img src="images/logo.webp" alt="Freetown Chamber of Commerce logo" width="60" height="60">
-            <div>
-                <h1>Freetown Chamber of Commerce</h1>
-            </div>
+            <span class="header-title">Welcome to Our Chamber</span>
             <button id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
         </div>
         <nav>
@@ -42,8 +40,10 @@
     </header>
 
     <main>
+        <h1 class="main-title">Freetown Chamber of Commerce</h1>
+
         <section class="hero">
-            <img src="images/freetown-city.webp" alt="Freetown business district skyline" width="1200" height="600" fetchpriority="high">
+            <img src="images/freetown-city.webp" alt="Freetown business district skyline" width="1200" height="600">
             <div class="hero-content">
                 <h2>Building Business. Building Community.</h2>
                 <a href="join.html" class="cta-button">Join the Chamber</a>
@@ -69,7 +69,7 @@
             <section class="card weather">
                 <h2>Weather in Freetown</h2>
                 <div id="weather-current">
-                    <img id="weather-icon" src="images/weather-placeholder.png" alt="Weather icon" style="display:none;" width="50" height="50">
+                    <img id="weather-icon" class="hidden" src="images/weather-placeholder.png" alt="Weather icon" width="50" height="50">
                     <p><span id="current-temp"></span></p>
                     <p id="weather-desc" class="capitalize"></p>
                 </div>

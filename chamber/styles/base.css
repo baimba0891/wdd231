@@ -63,7 +63,15 @@ header {
   font-weight: bold;
 }
 
-.hidden { display: none; }
+.hidden { display: none;
+ }
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+
+}
 
 /* HERO */
 .hero {
@@ -276,6 +284,12 @@ footer p { margin: 0.2rem 0; }
 }
 
 .directory-heading{
+  text-align:center;
+  margin:1rem;
+  color:#0a3d62;
+}
+
+.main-title {
   text-align:center;
   margin:1rem;
   color:#0a3d62;
