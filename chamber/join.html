@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join | Freetown Chamber</title>
+<meta name="description" content="Join the Freetown Chamber of Commerce - Membership application">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/larger.css">
+<link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+
+<header><div class="header-top">
+<img src="images/logo.webp" alt="Logo" width="60" height="60">
+<div><h1>Freetown</h1>
+<p>Chamber of Commerce</p>
+</div>
+<button id="menu-toggle" aria-expanded="false">&#9776;</button>
+</div>
+<ul id="menu" class="hidden">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="discover.html">Discover</a></li>
+    <li><a href="directory.html">Directory</a></li>
+    <li><a href="join.html" class="active">Join</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<h2 class="become">Become a Member</h2>
+<div class="join-grid">
+<form class="form-card" method="get" action="thankyou.html">
+<label>First Name* <input type="text" name="fname" id="fname" required autocomplete="given-name"></label>
+<label>Last Name* <input type="text" name="lname" id="lname" required autocomplete="family-name"></label>
+<label>Business Position <input type="text" name="position" id="position" pattern="[A-Za-z\s-]{7,}" title="Minimum 7 characters, letters, hyphens and spaces only"></label>
+<label>Email* <input type="email" name="email" id="email" required autocomplete="email" placeholder="you@business.sl"></label>
+<label>Phone* <input type="tel" name="phone" id="phone" required autocomplete="tel"></label>
+<label>Business Name* <input type="text" name="business" id="business" required autocomplete="organization"></label>
+<label>Membership Level*
+<select name="membership" id="membership" required>
+<option value="">Select Level</option>
+<option value="Non-Profit">Non-Profit - Le0 (Free for NGOs)</option>
+<option value="Bronze">Bronze - Le150/yr (Non-Profit)</option>
+<option value="Silver">Silver - Le350/yr</option>
+<option value="Gold">Gold - Le650/yr</option>
+</select></label>
+<label>Business Description<textarea name="description" id="description" rows="4"></textarea></label>
+<input type="hidden" name="timestamp" id="timestamp">
+<input type="submit" value="Join the Chamber" class="submit-btn">
+</form>
+<div>
+<div class="levels-card">
+<h2>Membership Levels</h2>
+<div class="level nonprofit"><h3>Non-Profit (Free)</h3><p>For NGOs and charities</p><ul><li>Directory listing</li><li>Monthly newsletter</li><li>1 training per quarter</li></ul></div>
+<div class="level silver"><h3>Silver - Le350/yr</h3><p>Most Popular for SMEs</p><ul><li>All Non-Profit benefits</li><li>Spotlight advertising (rotation)</li><li>3 luncheon tickets</li><li>Social media promotion</li><li>10% event discount</li></ul></div>
+<div class="level gold"><h3>Gold - Le650/yr</h3><p>Premium for large businesses</p><ul><li>All Silver benefits</li><li>Homepage spotlight (priority)</li><li>5 luncheon tickets + 1 sponsorship</li><li>Free training for staff</li><li>Front-page advertising</li><li>20% event discount</li></ul></div>
+</div>
+</div>
+</div>
+</main>
+<footer><div class="footer-info"><p><strong>Freetown Chamber</strong></p><p>10 Wallace Johnson Street</p></div><div class="footer-meta"><p>&copy; <span id="year"></span> Freetown Chamber</p><p id="lastModified"></p></div></footer>
+<script src="scripts/main.js"></script>
+<script>
+document.getElementById('timestamp').value = new Date().toISOString();
+</script>
+</body>
+</html>
