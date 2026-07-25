@@ -1,67 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Join | Freetown Chamber</title>
-<meta name="description" content="Join the Freetown Chamber of Commerce - Membership application">
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/base.css">
-<link rel="stylesheet" href="styles/larger.css">
-<link rel="stylesheet" href="styles/join.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join | Freetown Chamber</title>
+  <meta name="description" content="Join the Freetown Chamber of Commerce - Membership application to grow your network and business.">
+  <meta name="author" content="Augustine Baimba">
+  
+
+  <meta property="og:title" content="Join the Freetown Chamber of Commerce">
+  <meta property="og:description" content="Join the Freetown Chamber of Commerce and grow your business with networking, advocacy, and exclusive member benefits in Freetown.">
+  <meta property="og:image" content="https://baimba0891.github.io/wdd231/chamber/images/logo.webp">
+  <meta property="og:url" content="https://baimba0891.github.io/wdd231/chamber/join.html">
+
+  
+  <link rel="icon" href="images/favicon.ico">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/join.css">
 </head>
 <body>
+  <header>
+    <div class="header-content">
+      <img src="images/logo.webp" alt="Freetown Chamber of Commerce Logo" width="80" height="80">
+      <span class="header-title">Freetown Chamber</span>
+      <button id="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="data:text/html;base64,PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgPG1ldGEgY2hhcnNldD0iVVRGLTgiPgogIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wIj4KICA8dGl0bGU+Sm9pbiB8IEZyZWV0b3duIENoYW1iZXI8L3RpdGxlPgogIDxtZXRhIG5hbWU9ImRlc2NyaXB0aW9uIiBjb250ZW50PSJKb2luIHRoZSBGcmVldG93biBDaGFtYmVyIG9mIENvbW1lcmNlIC0gTWVtYmVyc2hpcCBhcHBsaWNhdGlvbiB0byBncm93IHlvdXIgbmV0d29yayBhbmQgYnVzaW5lc3MuIj4KICA8bWV0YSBuYW1lPSJhdXRob3IiIGNvbnRlbnQ9IkF1Z3VzdGluZSBCYWltYmEiPgogIAogIDwhLS0gT3BlbiBHcmFwaCAtLT4KICA8bWV0YSBwcm9wZXJ0eT0ib2c6dGl0bGUiIGNvbnRlbnQ9IkpvaW4gdGhlIEZyZWV0b3duIENoYW1iZXIgb2YgQ29tbWVyY2UiPgogIDxtZXRhIHByb3BlcnR5PSJvZzpkZXNjcmlwdGlvbiIgY29udGVudD0iSm9pbiB0aGUgRnJlZXRvd24gQ2hhbWJlciBvZiBDb21tZXJjZSBhbmQgZ3JvdyB5b3VyIGJ1c2luZXNzIHdpdGggbmV0d29ya2luZywgYWR2b2NhY3ksIGFuZCBleGNsdXNpdmUgbWVtYmVyIGJlbmVmaXRzIGluIEZyZWV0b3duLiI+CiAgPG1ldGEgcHJvcGVydHk9Im9nOmltYWdlIiBjb250ZW50PSJodHRwczovL2JhaW1iYTA4OTEuZ2l0aHViLmlvL3dkZDIzMS9jaGFtYmVyL2ltYWdlcy9sb2dvLndlYnAiPgogIDxtZXRhIHByb3BlcnR5PSJvZzp1cmwiIGNvbnRlbnQ9Imh0dHBzOi8vYmFpbWJhMDg5MS5naXRodWIuaW8vd2RkMjMxL2NoYW1iZXIvam9pbi5odG1sIj4KCiAgPCEtLSBGYXZpY29uIC0tPgogIDxsaW5rIHJlbD0iaWNvbiIgaHJlZj0iaW1hZ2VzL2Zhdmljb24uaWNvIj4KCiAgPCEtLSBHb29nbGUgRm9udHMgLS0+CiAgPGxpbmsgcmVsPSJwcmVjb25uZWN0IiBocmVmPSJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tIj4KICA8bGluayByZWw9InByZWNvbm5lY3QiIGhyZWY9Imh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20iIGNyb3Nzb3JpZ2luPgogIDxsaW5rIGhyZWY9Imh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9Um9ib3RvOndnaHRANDAwOzcwMCZmYW1pbHk9TW9udHNlcnJhdDp3Z2h0QDYwMCZkaXNwbGF5PXN3YXAiIHJlbD0ic3R5bGVzaGVldCI+CgogIDwhLS0gU3R5bGVzIC0tPgogIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0ic3R5bGVzL25vcm1hbGl6ZS5jc3MiPgogIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0ic3R5bGVzL2Jhc2UuY3NzIj4KICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9InN0eWxlcy9sYXJnZXIuY3NzIj4KICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9InN0eWxlcy9qb2luLmNzcyI+CjwvaGVhZD4KPGJvZHk+CiAgPGhlYWRlcj4KICAgIDxkaXYgY2xhc3M9ImhlYWRlci1jb250ZW50Ij4KICAgICAgPGltZyBzcmM9ImltYWdlcy9sb2dvLndlYnAiIGFsdD0iRnJlZXRvd24gQ2hhbWJlciBvZiBDb21tZXJjZSBMb2dvIiB3aWR0aD0iODAiIGhlaWdodD0iODAiPgogICAgICA8c3BhbiBjbGFzcz0iaGVhZGVyLXRpdGxlIj5GcmVldG93biBDaGFtYmVyPC9zcGFuPgogICAgICA8YnV0dG9uIGlkPSJtZW51LXRvZ2dsZSIgYXJpYS1sYWJlbD0iT3BlbiBtZW51Ij7imLA8L2J1dHRvbj4KICAgIDwvZGl2PgogICAgPG5hdj4KICAgICAgPHVsIGlkPSJtZW51Ij4KICAgICAgICA8bGk+PGEgaHJlZj0iaW5kZXguaHRtbCI+SG9tZTwvYT48L2xpPgogICAgICAgIDxsaT48YSBocmVmPSJkaXNjb3Zlci5odG1sIj5EaXNjb3ZlcjwvYT48L2xpPgogICAgICAgIDxsaT48YSBocmVmPSJkaXJlY3RvcnkuaHRtbCI+RGlyZWN0b3J5PC9hPjwvbGk+CiAgICAgICAgPGxpPjxhIGhyZWY9ImpvaW4uaHRtbCIgY2xhc3M9ImFjdGl2ZSI+Sm9pbjwvYT48L2xpPgogICAgICA8L3VsPgogICAgPC9uYXY+CiAgPC9oZWFkZXI+CgogIDxtYWluPgogICAgPGgxPkpvaW4gfCBGcmVldG93biBDaGFtYmVyPC9oMT4KICAgIAogICAgPGRpdiBjbGFzcz0iam9pbi1jb250YWluZXIiPgogICAgICA8IS0tIEZvcm0gU2VjdGlvbiAtLT4KICAgICAgPHNlY3Rpb24gY2xhc3M9ImZvcm0tY2FyZCI+CiAgICAgICAgPGgyPk1lbWJlcnNoaXAgQXBwbGljYXRpb248L2gyPgogICAgICAgIDxmb3JtIG1ldGhvZD0iZ2V0IiBhY3Rpb249InRoYW5reW91Lmh0bWwiPgogICAgICAgICAgPGxhYmVsIGZvcj0iZm5hbWUiPkZpcnN0IE5hbWU6CiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0iZm5hbWUiIG5hbWU9ImZpcnN0bmFtZSIgdGl0bGU9IlBsZWFzZSBlbnRlciB5b3VyIGZpcnN0IG5hbWUiIGF1dG9jb21wbGV0ZT0iZ2l2ZW4tbmFtZSIgcmVxdWlyZWQ+CiAgICAgICAgICA8L2xhYmVsPgoKICAgICAgICAgIDxsYWJlbCBmb3I9ImxuYW1lIj5MYXN0IE5hbWU6CiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0ibG5hbWUiIG5hbWU9Imxhc3RuYW1lIiB0aXRsZT0iUGxlYXNlIGVudGVyIHlvdXIgbGFzdCBuYW1lIiBhdXRvY29tcGxldGU9ImZhbWlseS1uYW1lIiByZXF1aXJlZD4KICAgICAgICAgIDwvbGFiZWw+CgogICAgICAgICAgPGxhYmVsIGZvcj0ib3JndGl0bGUiPk9yZ2FuaXphdGlvbiBUaXRsZToKICAgICAgICAgICAgPGlucHV0IHR5cGU9InRleHQiIGlkPSJvcmd0aXRsZSIgbmFtZT0ib3JndGl0bGUiIHRpdGxlPSJFbnRlciB5b3VyIG9yZ2FuaXphdGlvbiB0aXRsZSAtIG1pbmltdW0gNyBjaGFyYWN0ZXJzLCBsZXR0ZXJzLCBoeXBoZW5zIGFuZCBzcGFjZXMgb25seSIgYXV0b2NvbXBsZXRlPSJvcmdhbml6YXRpb24tdGl0bGUiIHBhdHRlcm49IltBLVphLXpcc1wtXXs3LH0iIHJlcXVpcmVkPgogICAgICAgICAgPC9sYWJlbD4KCiAgICAgICAgICA8bGFiZWwgZm9yPSJlbWFpbCI+RW1haWwgQWRkcmVzczoKICAgICAgICAgICAgPGlucHV0IHR5cGU9ImVtYWlsIiBpZD0iZW1haWwiIG5hbWU9ImVtYWlsIiB0aXRsZT0iUGxlYXNlIGVudGVyIGEgdmFsaWQgZW1haWwgYWRkcmVzcyIgYXV0b2NvbXBsZXRlPSJlbWFpbCIgcGxhY2Vob2xkZXI9ImV4YW1wbGVAZW1haWwuY29tIiByZXF1aXJlZD4KICAgICAgICAgIDwvbGFiZWw+CgogICAgICAgICAgPGxhYmVsIGZvcj0icGhvbmUiPk1vYmlsZSBQaG9uZToKICAgICAgICAgICAgPGlucHV0IHR5cGU9InRlbCIgaWQ9InBob25lIiBuYW1lPSJwaG9uZSIgdGl0bGU9IlBsZWFzZSBlbnRlciB5b3VyIG1vYmlsZSBwaG9uZSBudW1iZXIiIGF1dG9jb21wbGV0ZT0idGVsIiByZXF1aXJlZD4KICAgICAgICAgIDwvbGFiZWw+CgogICAgICAgICAgPGxhYmVsIGZvcj0ib3JnbmFtZSI+T3JnYW5pemF0aW9uIE5hbWU6CiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0ib3JnbmFtZSIgbmFtZT0ib3JnbmFtZSIgdGl0bGU9IlBsZWFzZSBlbnRlciB5b3VyIG9yZ2FuaXphdGlvbiBvciBidXNpbmVzcyBuYW1lIiBhdXRvY29tcGxldGU9Im9yZ2FuaXphdGlvbiIgcmVxdWlyZWQ+CiAgICAgICAgICA8L2xhYmVsPgoKICAgICAgICAgIDxsYWJlbCBmb3I9Im1lbWJlcnNoaXAiPk1lbWJlcnNoaXAgTGV2ZWw6CiAgICAgICAgICAgIDxzZWxlY3QgaWQ9Im1lbWJlcnNoaXAiIG5hbWU9Im1lbWJlcnNoaXAiIHRpdGxlPSJQbGVhc2Ugc2VsZWN0IGEgbWVtYmVyc2hpcCBsZXZlbCIgcmVxdWlyZWQ+CiAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iIj4tLSBTZWxlY3QgYSBMZXZlbCAtLTwvb3B0aW9uPgogICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9Ik5QIj5OUCBNZW1iZXJzaGlwIChOb24tUHJvZml0IC0gRnJlZSk8L29wdGlvbj4KICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJCcm9uemUiPkJyb256ZSBNZW1iZXJzaGlwPC9vcHRpb24+CiAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iU2lsdmVyIj5TaWx2ZXIgTWVtYmVyc2hpcDwvb3B0aW9uPgogICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9IkdvbGQiPkdvbGQgTWVtYmVyc2hpcDwvb3B0aW9uPgogICAgICAgICAgICA8L3NlbGVjdD4KICAgICAgICAgIDwvbGFiZWw+CgogICAgICAgICAgPGxhYmVsIGZvcj0iZGVzY3JpcHRpb24iPk9yZ2FuaXphdGlvbiBEZXNjcmlwdGlvbjoKICAgICAgICAgICAgPHRleHRhcmVhIGlkPSJkZXNjcmlwdGlvbiIgbmFtZT0iZGVzY3JpcHRpb24iIHRpdGxlPSJQbGVhc2UgZGVzY3JpYmUgeW91ciBvcmdhbml6YXRpb24gb3IgYnVzaW5lc3MiIHJvd3M9IjQiPjwvdGV4dGFyZWE+CiAgICAgICAgICA8L2xhYmVsPgoKICAgICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIGlkPSJ0aW1lc3RhbXAiIG5hbWU9InRpbWVzdGFtcCI+CgogICAgICAgICAgPGJ1dHRvbiB0eXBlPSJzdWJtaXQiIGNsYXNzPSJzdWJtaXQtYnRuIj5Kb2luIHRoZSBDaGFtYmVyPC9idXR0b24+CiAgICAgICAgPC9mb3JtPgogICAgICA8L3NlY3Rpb24+CgogICAgICA8IS0tIE1lbWJlcnNoaXAgTGV2ZWxzIFNlY3Rpb24gLS0+CiAgICAgIDxzZWN0aW9uIGNsYXNzPSJsZXZlbHMtY2FyZCI+CiAgICAgICAgPGgyPk1lbWJlcnNoaXAgTGV2ZWxzPC9oMj4KICAgICAgICAKICAgICAgICA8ZGl2IGNsYXNzPSJsZXZlbC1jYXJkIG5vbnByb2ZpdCI+CiAgICAgICAgICA8aDM+TlAgTWVtYmVyc2hpcDwvaDM+CiAgICAgICAgICA8cD5Gb3Igbm9uLXByb2ZpdCBvcmdhbml6YXRpb25zPC9wPgogICAgICAgICAgPHA+PHN0cm9uZz5GcmVlPC9zdHJvbmc+PC9wPgogICAgICAgICAgPGEgaHJlZj0iI25vbnByb2ZpdC1tb2RhbCI+TGVhcm4gTW9yZTwvYT4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0ibGV2ZWwtY2FyZCBicm9uemUiPgogICAgICAgICAgPGgzPkJyb256ZSBNZW1iZXJzaGlwPC9oMz4KICAgICAgICAgIDxwPkZvciBzbWFsbCBidXNpbmVzc2VzPC9wPgogICAgICAgICAgPHA+PHN0cm9uZz5MZTIwMC95ZWFyPC9zdHJvbmc+PC9wPgogICAgICAgICAgPGEgaHJlZj0iI2Jyb256ZS1tb2RhbCI+TGVhcm4gTW9yZTwvYT4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0ibGV2ZWwtY2FyZCBzaWx2ZXIiPgogICAgICAgICAgPGgzPlNpbHZlciBNZW1iZXJzaGlwPC9oMz4KICAgICAgICAgIDxwPkZvciBncm93aW5nIGJ1c2luZXNzZXM8L3A+CiAgICAgICAgICA8cD48c3Ryb25nPkxlNDAwL3llYXI8L3N0cm9uZz48L3A+CiAgICAgICAgICA8YSBocmVmPSIjc2lsdmVyLW1vZGFsIj5MZWFybiBNb3JlPC9hPgogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJsZXZlbC1jYXJkIGdvbGQiPgogICAgICAgICAgPGgzPkdvbGQgTWVtYmVyc2hpcDwvaDM+CiAgICAgICAgICA8cD5QcmVtaXVtIGZvciBsYXJnZSBidXNpbmVzc2VzPC9wPgogICAgICAgICAgPHA+PHN0cm9uZz5MZTY1MC95ZWFyPC9zdHJvbmc+PC9wPgogICAgICAgICAgPGEgaHJlZj0iI2dvbGQtbW9kYWwiPkxlYXJuIE1vcmU8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvc2VjdGlvbj4KICAgIDwvZGl2PgoKICAgIDwhLS0gTW9kYWxzIC0gdXNpbmcgZGl2cyBub3QgZGlhbG9nIHRvIGF2b2lkIGlzc3VlcywgYnV0IGNhbiBiZSBzdHlsZWQgLS0+CiAgICA8ZGl2IGlkPSJub25wcm9maXQtbW9kYWwiIGNsYXNzPSJtb2RhbCI+CiAgICAgIDxkaXYgY2xhc3M9Im1vZGFsLWNvbnRlbnQiPgogICAgICAgIDxoMz5OUCBNZW1iZXJzaGlwIEJlbmVmaXRzPC9oMz4KICAgICAgICA8dWw+CiAgICAgICAgICA8bGk+TmV0d29ya2luZyBldmVudHM8L2xpPgogICAgICAgICAgPGxpPk5ld3NsZXR0ZXI8L2xpPgogICAgICAgICAgPGxpPlRyYWluaW5nIGRpc2NvdW50czwvbGk+CiAgICAgICAgPC91bD4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L21haW4+CgogIDxmb290ZXI+CiAgICA8ZGl2IGNsYXNzPSJmb290ZXItaW5mbyI+CiAgICAgIDxwPjxzdHJvbmc+RnJlZXRvd24gQ2hhbWJlciBvZiBDb21tZXJjZTwvc3Ryb25nPjwvcD4KICAgICAgPHA+MTIzIENvbW1lcmNlIFN0cmVldCwgRnJlZXRvd24sIFNpZXJyYSBMZW9uZTwvcD4KICAgICAgPHA+aW5mb0BmcmVldG93bmNoYW1iZXIuc2wgfCArMjMyIDc2IDEyMzQ1NjwvcD4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0iZm9vdGVyLXNvY2lhbCI+CiAgICAgIDxwPiZjb3B5OyA8c3BhbiBpZD0iY3VycmVudHllYXIiPjwvc3Bhbj4gRnJlZXRvd24gQ2hhbWJlcjwvcD4KICAgICAgPHA+QXVndXN0aW5lIEJhaW1iYSB8IFdERCAyMzE8L3A+CiAgICAgIDxwIGlkPSJsYXN0TW9kaWZpZWQiPjwvcD4KICAgIDwvZGl2PgogIDwvZm9vdGVyPgoKICA8c2NyaXB0IHNyYz0ic2NyaXB0cy9tYWluLmpzIiBkZWZlcj48L3NjcmlwdD4KICA8c2NyaXB0IHNyYz0ic2NyaXB0cy9qb2luLmpzIiBkZWZlcj48L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+Cg==" class="active">Join</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header><div class="header-top">
-<img src="images/logo.webp" alt="Logo" width="60" height="60">
-<div><h1>Freetown</h1>
-<p>Chamber of Commerce</p>
-</div>
-<button id="menu-toggle" aria-expanded="false">&#9776;</button>
-</div>
-<ul id="menu" class="hidden">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="discover.html">Discover</a></li>
-    <li><a href="directory.html">Directory</a></li>
-    <li><a href="join.html" class="active">Join</a></li>
-</ul>
-</nav>
-</header>
-<main>
-<h2 class="become">Become a Member</h2>
-<div class="join-grid">
-<form class="form-card" method="get" action="thankyou.html">
-<label>First Name* <input type="text" name="fname" id="fname" required autocomplete="given-name"></label>
-<label>Last Name* <input type="text" name="lname" id="lname" required autocomplete="family-name"></label>
-<label>Business Position <input type="text" name="position" id="position" pattern="[A-Za-z\s-]{7,}" title="Minimum 7 characters, letters, hyphens and spaces only"></label>
-<label>Email* <input type="email" name="email" id="email" required autocomplete="email" placeholder="you@business.sl"></label>
-<label>Phone* <input type="tel" name="phone" id="phone" required autocomplete="tel"></label>
-<label>Business Name* <input type="text" name="business" id="business" required autocomplete="organization"></label>
-<label>Membership Level*
-<select name="membership" id="membership" required>
-<option value="">Select Level</option>
-<option value="Non-Profit">Non-Profit - Le0 (Free for NGOs)</option>
-<option value="Bronze">Bronze - Le150/yr (Non-Profit)</option>
-<option value="Silver">Silver - Le350/yr</option>
-<option value="Gold">Gold - Le650/yr</option>
-</select></label>
-<label>Business Description<textarea name="description" id="description" rows="4"></textarea></label>
-<input type="hidden" name="timestamp" id="timestamp">
-<input type="submit" value="Join the Chamber" class="submit-btn">
-</form>
-<div>
-<div class="levels-card">
-<h2>Membership Levels</h2>
-<div class="level nonprofit"><h3>Non-Profit (Free)</h3><p>For NGOs and charities</p><ul><li>Directory listing</li><li>Monthly newsletter</li><li>1 training per quarter</li></ul></div>
-<div class="level silver"><h3>Silver - Le350/yr</h3><p>Most Popular for SMEs</p><ul><li>All Non-Profit benefits</li><li>Spotlight advertising (rotation)</li><li>3 luncheon tickets</li><li>Social media promotion</li><li>10% event discount</li></ul></div>
-<div class="level gold"><h3>Gold - Le650/yr</h3><p>Premium for large businesses</p><ul><li>All Silver benefits</li><li>Homepage spotlight (priority)</li><li>5 luncheon tickets + 1 sponsorship</li><li>Free training for staff</li><li>Front-page advertising</li><li>20% event discount</li></ul></div>
-</div>
-</div>
-</div>
-</main>
-<footer><div class="footer-info"><p><strong>Freetown Chamber</strong></p><p>10 Wallace Johnson Street</p></div><div class="footer-meta"><p>&copy; <span id="year"></span> Freetown Chamber</p><p id="lastModified"></p></div></footer>
-<script src="scripts/main.js"></script>
-<script>
-document.getElementById('timestamp').value = new Date().toISOString();
-</script>
+  <main>
+    <h1>Join | Freetown Chamber</h1>
+    
+    <div class="join-container">
+      <!-- Form Section -->
+      <section class="form-card">
+        <h2>Membership Application</h2>
+        <form method="get" action="thankyou.html">
+          <label for="fname">First Name:
+            <input type="text" id="fname" name="firstname" title="Please enter your first name" autocomplete="given-name" required>
+          </label>
+
+          <label for="lname">Last Name:
+            <input type="text" id="lname" name="lastname" title="Please enter your last name" autocomplete="family-name" required>
+          </label>
+
+          <label for="orgtitle">Organization Title:
+            <input type="text" id="orgtitle" name="orgtitle" title="Enter your organization title - minimum 7 characters, letters, hyphens and spaces only" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" required>
+          </label>
+
+          <label for="email">Email Address:
+            <input type="email" id="email" name="email" title="Please enter a valid email address" autocomplete="email" placeholder="example@email.com" required>
+          </label>
+
+          <label for="phone">Mobile Phone:
+            <input type="tel" id="phone" name="phone" title="Please enter your mobile phone number" autocomplete="tel" required>
+          </label>
+
+          <label for="orgname">Organization Name:
+            <input type="text" id="orgname" name="orgname" title="Please enter your organization or business name" autocomplete="organization" required>
+          </label>
+
+          <label for="membership">Membership Level:
+            <select id="membership" name="membership" title="Please select a membership level" required>
+              <option value="">-- Select a Level --</option>
+              <option value="NP">NP Membership (Non-Profit - Free)</option>
+              <option value="Bronze">Bronze Membership</option>
+              <option value="Silver">Silver Membership</option>
+              <option value="Gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label for="description">Organization Description:
+            <textarea id="description" name="description" title="Please describe your organization or business" rows="4"></textarea>
+          </label>
+
+          <input type="hidden" id="timestamp" name="timestamp">
+
+          <button type="submit" class="submit-btn">Join the Chamber</button>
+        </form>
+      </section>
+
+      <!-- Membership Levels Section -->
+      <section class="levels-card">
+        <h2>Membership Levels</h2>
+        
+        <div class="level-card nonprofit">
+          <h3>NP Membership</h3>
+          <p>For non-profit organizations</p>
+          <p><strong>Free</strong></p>
+          <a href="#nonprofit-modal">Learn More</a>
+        </div>
+
+        <div class="level-card bronze">
+          <h3>Bronze Membership</h3>
+          <p>For small businesses</p>
+          <p><strong>Le200/year</strong></p>
+          <a href="#bronze-modal">Learn More</a>
+        </div>
+
+        <div class="level-card silver">
+          <h3>Silver Membership</h3>
+          <p>For growing businesses</p>
+          <p><strong>Le400/year</strong></p>
+          <a href="#silver-modal">Learn More</a>
+        </div>
+
+        <div class="level-card gold">
+          <h3>Gold Membership</h3>
+          <p>Premium for large businesses</p>
+          <p><strong>Le650/year</strong></p>
+          <a href="#gold-modal">Learn More</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modals - using divs not dialog to avoid issues, but can be styled -->
+    <div id="nonprofit-modal" class="modal">
+      <div class="modal-content">
+        <h3>NP Membership Benefits</h3>
+        <ul>
+          <li>Networking events</li>
+          <li>Newsletter</li>
+          <li>Training discounts</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><strong>Freetown Chamber of Commerce</strong></p>
+      <p>123 Commerce Street, Freetown, Sierra Leone</p>
+      <p>info@freetownchamber.sl | +232 76 123456</p>
+    </div>
+    <div class="footer-social">
+      <p>&copy; <span id="currentyear"></span> Freetown Chamber</p>
+      <p>Augustine Baimba | WDD 231</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/join.js" defer></script>
 </body>
 </html>
