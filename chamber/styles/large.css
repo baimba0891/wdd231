@@ -52,6 +52,22 @@
   .home-grid { padding: 2rem; }
 }
 
-
+/* ===== W05 DISCOVER - larger.css ===== */
+@media only screen and (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1 card2 card2"
+      "card3 card3 card4"
+      "card5 card6 card4"
+      "card7 card7 card8";
+  }
+  .discover-card figure img:hover {
+    transform: scale(1.05) rotate(1deg);
+    filter: brightness(1.1) saturate(1.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+  }
+}
 
 

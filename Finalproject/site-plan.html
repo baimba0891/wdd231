@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salone Discover - Site Plan</title>
+  <meta name="description" content="Site plan for Salone Discover final project - Green White Blue flag theme">
+  <meta name="author" content="Augustine Baimba">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --flag-green: #1EB53A;
+      --flag-white: #FFFFFF;
+      --flag-blue: #0072C6;
+      --primary: #0E7A2A;
+      --primary-dark: #094D1B;
+      --accent-blue: #0061A8;
+      --accent-blue-light: #E6F2FF;
+      --text: #1A1A1A;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Lora', serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--flag-white);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1.5rem 2rem;
+      border-bottom: 6px solid var(--flag-blue);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    header img {
+      background: white;
+      padding: 6px 12px;
+      border-radius: 10px;
+      height: 60px;
+      width: auto;
+    }
+    header h1 { font-family: 'Montserrat', sans-serif; font-size: 2rem; color: white; }
+    header p { color: #E0FFE6; }
+    main { padding: 2rem; }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+      border-bottom: 4px solid var(--flag-blue);
+      border-left: 6px solid var(--flag-green);
+      padding: 0.5rem 1rem;
+      margin: 2.5rem 0 1rem;
+      background: var(--accent-blue-light);
+      border-radius: 0 8px 8px 0;
+    }
+    h3 { font-family: 'Montserrat', sans-serif; color: var(--accent-blue); margin: 1.5rem 0 0.5rem; }
+    .color-boxes { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
+    .color-box {
+      flex: 1; min-width: 180px; padding: 1.8rem 1rem; text-align: center;
+      border: 2px solid #000; border-radius: 10px; font-weight: 600;
+    }
+    .wireframes { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0; }
+    .wireframe-card {
+      border: 2px solid #000; border-radius: 10px; padding: 1rem;
+      background: white; text-align: center;
+    }
+    .wireframe-card img {
+      width: 100%; max-width: 100%; height: auto;
+      border: 1px solid #000; border-radius: 6px; background: #f9f9f9;
+    }
+    @media (max-width: 700px) { .wireframes { grid-template-columns: 1fr; } header { flex-direction: column; text-align: center; } }
+    footer {
+      background: var(--flag-blue);
+      color: white;
+      border-top: 6px solid var(--flag-green);
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    a { color: var(--accent-blue); }
+    ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+    .highlight { background: #E6F2FF; border-left: 5px solid var(--flag-green); padding: 1rem; border-radius: 6px; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.webp" alt="Salone Discover Logo - Green mountains Blue sun" width="180" height="60" onerror="this.style.display='none'">
+    <div>
+      <h1>Salone Discover - Site Plan</h1>
+      <p>Augustine Baimba | WDD231 | Sierra Leone Green White Blue 🇸🇱</p>
+    </div>
+  </header>
+
+  <main>
+    <h2>Site Name: Salone Discover</h2>
+    <p><strong>Domain:</strong> salonediscover.org</p>
+    <p>I chose <strong>Salone Discover</strong> because Salone is what Sierra Leoneans proudly call their country (Mama Salone). Discover invites tourists to explore hidden gems. The name is short, memorable, and uses our local identity.</p>
+
+    <h2>Site Purpose</h2>
+    <p>Salone Discover is a tourism information hub for Sierra Leone targeting first-time visitors, diaspora, and eco-tourists. The site provides:</p>
+    <ul>
+      <li>15 curated destinations across beaches, history, and wildlife</li>
+      <li>Best time to visit, location, and cultural context</li>
+      <li>Contact form for trip planning inquiries</li>
+      <li>Attributions for images and data sources</li>
+    </ul>
+    <div class="highlight">
+      <strong>Flag Theme:</strong> Green header (agriculture & mountains), White body (unity & justice), Blue footer (Atlantic Ocean) - colors of Sierra Leone national flag.
+    </div>
+
+    <h2>Scenarios</h2>
+    <h3>Scenario 1: First-time tourist from USA</h3>
+    <p><em>"I want the best beaches in Africa that are safe and not crowded. Where should I go in Sierra Leone?"</em><br>
+    -> User visits Destinations page, filters by Beach category, sees River Number 2, Tokeh, Lumley with images and best time to visit.</p>
+
+    <h3>Scenario 2: Sierra Leonean in diaspora</h3>
+    <p><em>"I left Salone 20 years ago. What historical sites can I show my children?"</em><br>
+    -> User reads Bunce Island, Cotton Tree, Railway Museum pages to reconnect with history.</p>
+
+    <h3>Scenario 3: Eco-tourist / Researcher</h3>
+    <p><em>"I want to see chimpanzees and rainforest conservation projects."</em><br>
+    -> User finds Tacugama Sanctuary, Gola Rainforest, Tiwai Island with conservation info and contact form.</p>
+
+    <h2>Color Schema - Sierra Leone National Flag</h2>
+    <p>The site uses official flag colors with accessible dark versions for WCAG AA compliance.</p>
+    <div class="color-boxes">
+      <div class="color-box" style="background:#1EB53A; color:black;">Flag Green<br><strong>#1EB53A</strong><br>Buttons, Card left border<br>Agriculture</div>
+      <div class="color-box" style="background:#FFFFFF; color:black;">Flag White<br><strong>#FFFFFF</strong><br>Body background<br>Unity & Justice</div>
+      <div class="color-box" style="background:#0072C6; color:white;">Flag Blue<br><strong>#0072C6</strong><br>Footer, Links, Hover<br>Atlantic Ocean</div>
+    </div>
+    <div class="color-boxes" style="margin-top:1rem;">
+      <div class="color-box" style="background:#0E7A2A; color:white;">Header Green<br><strong>#0E7A2A</strong><br>Header BG (7.2:1 contrast)</div>
+      <div class="color-box" style="background:#E6F2FF; color:black;">Light Blue<br><strong>#E6F2FF</strong><br>Hero BG & Highlights</div>
+      <div class="color-box" style="background:#1A1A1A; color:white;">Text Black<br><strong>#1A1A1A</strong><br>Body Text (16:1 contrast)</div>
+    </div>
+    <p><strong>Implementation:</strong> Green Header with blue 5px bottom border, White body, Blue footer with green 5px top border. All text passes WAVE and Lighthouse accessibility.</p>
+
+    <h2>Typography</h2>
+    <p><strong>Headings:</strong> Montserrat Bold 700 - modern, clean, used for H1-H3, navigation, buttons. Represents strength and clarity of Sierra Leone.</p>
+    <p><strong>Body:</strong> Lora Regular 400 & 600 - readable serif, elegant for storytelling about culture and history.</p>
+    <p>Fonts loaded from Google Fonts with display=swap for performance. Font sizes: 16px base, 1.2rem line height, responsive scaling.</p>
+
+    <h2>Wireframes - Home Page</h2>
+    <p>Black and white sketches focusing on structure, layout, functionality. Not colors or images. Mobile (320px) stacked, Desktop (1024px) side-by-side.</p>
+    
+    <div class="wireframes">
+      <div class="wireframe-card">
+        <h3>Mobile View - 320px</h3>
+        <img src="images/wireframe-small.jpg" alt="Wireframe sketch of home page on mobile - header with hamburger menu, hero stacked, 3 cards stacked vertically, footer - black and white hand drawn" width="300" height="500">
+        <p style="font-size:0.85rem; margin-top:0.5rem;"><strong>Features:</strong> Logo top left, hamburger right, hero image + text stacked, 3 cards stacked, green header white body blue footer structure</p>
+      </div>
+      <div class="wireframe-card">
+        <h3>Desktop View - 1024px</h3>
+        <img src="images/wireframe-large.jpg" alt="Wireframe sketch of home page on desktop - horizontal nav, hero side by side, 3 cards in row, footer - black and white hand drawn" width="600" height="400">
+        <p style="font-size:0.85rem; margin-top:0.5rem;"><strong>Features:</strong> Logo left, nav horizontal Home Destinations Contact, hero side by side, 3 cards in row, footer</p>
+      </div>
+    </div>
+    <p><em>Note: Wireframes are hand-drawn sketches photographed. Images saved as wireframe-small.jpg and wireframe-large.jpg in images folder. Shows responsive layout from small to large viewport.</em></p>
+
+    <h2>Navigation</h2>
+    <p>Header: Logo (links to Home) | Home | Destinations | Contact | Attributions<br>
+    Footer: Copyright, quick links, Project Video link, flag meaning note</p>
+
+    <h2>Site Map</h2>
+    <ul>
+      <li>index.html - Home - Hero + Why Visit + CTA</li>
+      <li>destinations.html - 15 destinations from places.json, filter, modal dialog</li>
+      <li>contact.html - Contact form with validation -> thankyou.html</li>
+      <li>thankyou.html - Form data display via URLSearchParams</li>
+      <li>attributions.html - Image sources, data sources</li>
+      <li>site-plan.html - This document</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Salone Discover | Augustine Baimba | WDD231 Final Project | Freetown, Sierra Leone</p>
+    <p>Green #1EB53A - Agriculture | White #FFFFFF - Unity | Blue #0072C6 - Atlantic Ocean</p>
+  </footer>
+</body>
+</html>
