@@ -69,3 +69,6 @@ form input:focus, form textarea:focus, form select:focus { border-color: var(--f
 form label { display: block; margin-bottom: 1rem; } .form-wrapper { max-width: 700px; margin: 0 auto; } .form-note { font-size: 0.85rem; margin-top: 0.8rem; text-align: center; }
 .card-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 4px solid var(--flag-green); } .card-body { padding: 1.2rem; } .badge { background: var(--flag-blue); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; } .card-title { margin: 0.6rem 0 0.3rem; color: var(--primary); } .card-text { font-size: 0.95rem; margin-bottom: 0.8rem; } .card-meta { font-size: 0.85rem; } .card-btn { margin-top: 0.8rem; width: 100%; }
 .center-main { text-align: center; } .flag-bar { margin: 1rem auto; width: 100px; height: 6px; background: linear-gradient(to right, #1EB53A 33%, #FFF 33%, #FFF 66%, #0072C6 66%); border: 1px solid #000; border-radius: 3px; } .thankyou-info { margin: 2rem 0; } .thankyou-actions { margin-top: 2rem; } .thankyou-card { padding: 1.5rem; max-width: 600px; margin: 0 auto; } .thankyou-highlight { padding: 1rem; background: var(--accent-blue-light); border-left: 4px solid var(--flag-green); border-radius: 4px; margin-top: 1rem; }
+.cta-section h3 {
+   color: #094D1B; 
+  }
