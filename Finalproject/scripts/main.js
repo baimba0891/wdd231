@@ -1,41 +1,30 @@
 // Salone Discover - Green White Blue Flag Theme - Uses places.json
+import { getPlaces } from './data.js';
+import { saveFavorite } from './storage.js';
 const menuBtn = document.getElementById('menu');
 const nav = document.getElementById('nav');
-
 if (menuBtn && nav) {
   menuBtn.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     menuBtn.setAttribute('aria-expanded', isOpen);
-    menuBtn.textContent = isOpen ? '✕' : '☰';
+    menuBtn.textContent = isOpen ? 'X' : '\u2630';
   });
 }
-
 const yearSpan = document.getElementById('currentyear');
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 const lastMod = document.getElementById('lastModified');
 if (lastMod) lastMod.textContent = 'Last Modified: ' + document.lastModified;
-
 async function loadDestinations() {
   const container = document.getElementById('destinations-container');
   if (!container) return;
   try {
-    const response = await fetch('data/places.json');
-    if (!response.ok) throw new Error('Failed');
-    const data = await response.json();
+    const data = await getPlaces();
     container.innerHTML = '';
     data.forEach((item, index) => {
       const card = document.createElement('article');
       card.className = 'card';
-      card.innerHTML = `
-        <img src="${item.image}" alt="${item.name}" loading="lazy" width="400" height="250" style="width:100%; height:220px; object-fit:cover; border-bottom:4px solid #1EB53A;">
-        <div style="padding:1.2rem;">
-          <span style="background:#0072C6; color:white; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">${item.category}</span>
-          <h3 style="margin:0.6rem 0 0.3rem; color:#0E7A2A;">${item.name}</h3>
-          <p style="font-size:0.95rem; margin-bottom:0.8rem;">${item.description}</p>
-          <p style="font-size:0.85rem;"><strong>Location:</strong> ${item.location}</p>
-          <button class="btn" style="margin-top:0.8rem; width:100%;" data-index="${index}">Learn More</button>
-        </div>
-      `;
+      card.dataset.category = item.category.toLowerCase();
+      card.innerHTML = '<img src="'+item.image+'" alt="'+item.name+'" loading="lazy" width="400" height="250" class="card-img"><div class="card-body"><span class="badge">'+item.category+'</span><h3 class="card-title">'+item.name+'</h3><p class="card-text">'+item.description+'</p><p class="card-meta"><strong>Location:</strong> '+(item.location||item.region||'Sierra Leone')+'</p><button class="btn card-btn" data-index="'+index+'">Learn More</button></div>';
       container.appendChild(card);
     });
     const dialog = document.getElementById('details-dialog');
@@ -45,23 +34,46 @@ async function loadDestinations() {
         const idx = e.target.dataset.index;
         const item = data[idx];
         document.getElementById('dialog-title').textContent = item.name;
-        document.getElementById('dialog-image').src = item.image;
-        document.getElementById('dialog-location').textContent = item.location;
+        const imgEl = document.getElementById('dialog-image');
+        if (imgEl) { imgEl.src = item.image; imgEl.alt = item.name; }
+        document.getElementById('dialog-location').textContent = item.location || item.region || 'Sierra Leone';
         document.getElementById('dialog-desc').textContent = item.longDescription || item.description;
         document.getElementById('dialog-best').textContent = item.bestTime || 'Year-round';
         if (dialog) dialog.showModal();
+        saveFavorite(item.id);
       }
     });
     if (closeBtn && dialog) {
       closeBtn.addEventListener('click', () => dialog.close());
       dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
     }
+    const filterAll = document.getElementById('filter-all');
+    const filterBeach = document.getElementById('filter-beach');
+    const filterHistory = document.getElementById('filter-history');
+    const filterWildlife = document.getElementById('filter-wildlife');
+    function filterPlaces(cat) {
+      const cards = document.querySelectorAll('#destinations-container .card');
+      cards.forEach(card => {
+        const badge = card.querySelector('.badge').textContent.toLowerCase();
+        const category = card.dataset.category;
+        if (cat === 'all' || badge.includes(cat) || category.includes(cat)) { card.style.display = 'block'; } else { card.style.display = 'none'; }
+      });
+    }
+    if (filterAll) filterAll.addEventListener('click', () => filterPlaces('all'));
+    if (filterBeach) filterBeach.addEventListener('click', () => filterPlaces('beach'));
+    if (filterHistory) filterHistory.addEventListener('click', () => filterPlaces('history'));
+    if (filterWildlife) filterWildlife.addEventListener('click', () => {
+      const cards = document.querySelectorAll('#destinations-container .card');
+      cards.forEach(card => {
+        const cat = card.dataset.category;
+        if (cat.includes('wildlife') || cat.includes('nature') || cat.includes('culture')) { card.style.display = 'block'; } else { card.style.display = 'none'; }
+      });
+    });
   } catch (err) {
-    container.innerHTML = '<p style="color:#0072C6; padding:2rem; text-align:center; border:2px dashed #1EB53A;">Unable to load places. Check data/places.json exists</p>';
+    container.innerHTML = '<p class="loading-msg">Unable to load places. Check data/places.json exists</p>';
   }
 }
 loadDestinations();
-
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
@@ -71,7 +83,6 @@ if (contactForm) {
     window.location.href = 'thankyou.html?' + params;
   });
 }
-
 const thankYouContainer = document.getElementById('thankyou-info');
 if (thankYouContainer) {
   const params = new URLSearchParams(window.location.search);
@@ -79,14 +90,5 @@ if (thankYouContainer) {
   const email = params.get('email') || '';
   const interest = params.get('interest') || '';
   const message = params.get('message') || '';
-  thankYouContainer.innerHTML = `
-    <div class="card" style="padding:1.5rem; max-width:600px; margin:0 auto;">
-      <h3 style="color:#0E7A2A;">Thank you, ${name}! 🇸🇱</h3>
-      <p>We received your inquiry about <strong style="color:#0072C6;">${interest || 'Sierra Leone travel'}</strong></p>
-      ${email ? `<p><strong>Email:</strong> ${email}</p>` : ''}
-      ${message ? `<p><strong>Your Message:</strong> ${message}</p>` : ''}
-      <p style="margin-top:1rem; padding:1rem; background:#E6F2FF; border-left:4px solid #1EB53A; border-radius:4px;">We will respond within 24 hours!</p>
-    </div>
-  `;
+  thankYouContainer.innerHTML = '<div class="card thankyou-card"><h3 class="green-title">Thank you, '+name+'! SL</h3><p>We received your inquiry about <strong class="label-blue">'+(interest || 'Sierra Leone travel')+'</strong></p>'+(email ? '<p><strong>Email:</strong> '+email+'</p>' : '')+(message ? '<p><strong>Your Message:</strong> '+message+'</p>' : '')+'<p class="thankyou-highlight">We will respond within 24 hours!</p></div>';
 }
-

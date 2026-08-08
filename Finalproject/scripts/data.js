@@ -15,16 +15,11 @@ const backupData = [
   {"id":14,"name":"Fourah Bay College","region":"Western Area","category":"history","description":"First university in West Africa, founded in 1827.","image":"images/fourah.webp"},
   {"id":15,"name":"Lakka Beach","region":"Western Area","category":"beach","description":"Popular local beach with colorful fishing boats and fresh seafood.","image":"images/lakka.webp"}
 ];
-
 export async function getPlaces() {
   try {
     let response = await fetch('./data/places.json');
-    if (!response.ok) {
-      response = await fetch('data/places.json');
-    }
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
+    if (!response.ok) { response = await fetch('data/places.json'); }
+    if (!response.ok) { throw new Error(`HTTP ${response.status}`); }
     const data = await response.json();
     console.log('Loaded from JSON:', data.length, 'places');
     return data;

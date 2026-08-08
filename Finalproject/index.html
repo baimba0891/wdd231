@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salone Discover | Explore Sierra Leone</title>
-  <meta name="description" content="Explore Sierra Leone's beaches, history, and wildlife with Salone Discover - Green White Blue">
+  <meta name="description" content="Explore Sierra Leone's beaches, history, and wildlife with Salone Discover - Green White Blue. 15 curated destinations.">
   <meta name="author" content="Augustine Baimba">
-  <meta property="og:title" content="Salone Discover">
-  <meta property="og:description" content="Discover Sierra Leone - beaches, mountains, culture">
-  <meta property="og:image" content="images/logo.webp">
+  <meta property="og:title" content="Salone Discover - Explore Sierra Leone Green White Blue">
+  <meta property="og:description" content="Discover Sierra Leone's top 15 destinations - pristine beaches, rich history, and wildlife with Salone Discover travel guide.">
+  <meta property="og:image" content="https://baimba0891.github.io/wdd231/Finalproject/images/logo.webp">
+  <meta property="og:url" content="https://baimba0891.github.io/wdd231/Finalproject/index.html">
   <link rel="icon" href="images/logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/large.css">
@@ -29,48 +32,44 @@
   </nav>
 </header>
 
-  <main>
-    <section class="hero">
-      <div>
-        <h1>Welcome to Salone - Mama Salone</h1>
-        <p>Discover the Lion Mountains. From golden beaches to misty rainforests, Sierra Leone awaits in Green, White and Blue.</p>
-        <a href="./destinations.html" class="btn">Explore Places</a>
-      </div>
-      <img src="images/rivertwo.webp" alt="Beautiful beach in Sierra Leone with blue ocean" width="600" height="400" style="border-radius:12px; width:100%; border: 4px solid #1EB53A;">
-    </section>
-
-    <h2 style="text-align:center; margin:2rem 0 1rem; color:#0E7A2A;">Why Visit Sierra Leone?</h2>
-    <div class="grid">
-      <article class="card" style="padding:1.2rem;">
-        <h3>🏖️ Pristine Beaches</h3>
-        <p>Africa's best beaches - River No.2, Tokeh, and Bunce. White sand meets blue Atlantic.</p>
-      </article>
-      <article class="card" style="padding:1.2rem;">
-        <h3>🏛️ Rich History</h3>
-        <p>Bunce Island, Freedom history, Krio culture. A nation of unity and resilience.</p>
-      </article>
-      <article class="card" style="padding:1.2rem;">
-        <h3>🦁 Wildlife & Nature</h3>
-        <p>Tacugama chimps, Gola rainforest, green mountains touching the blue sky.</p>
-      </article>
+<main>
+  <section class="hero">
+    <div>
+      <h1>Welcome to Salone - Mama Salone</h1>
+      <p>Discover the Lion Mountains. From golden beaches to misty rainforests, Sierra Leone awaits in Green, White and Blue.</p>
+      <a href="./destinations.html" class="btn">Explore Places</a>
     </div>
+    <img src="images/rivertwo.webp" alt="Beautiful beach in Sierra Leone with blue ocean" width="600" height="400" class="hero-image">
+  </section>
 
-    <section style="margin-top:3rem; padding:1.5rem; background:#E6F2FF; border-left:6px solid #0072C6; border-radius:8px;">
-      <h3 style="color:#0072C6;">Plan Your Trip Today</h3>
-      <p>15 curated destinations across Sierra Leone. All information in one place.</p>
-      <a href="./contact.html" class="btn" style="margin-top:0.8rem;">Contact Us</a>
-    </section>
-  </main>
+  <h2 class="section-title">Why Visit Sierra Leone?</h2>
+  <div class="grid">
+    <article class="card card-padded">
+      <h3>Pristine Beaches</h3>
+      <p>Africa's best beaches - River No.2, Tokeh, and Bunce. White sand meets blue Atlantic.</p>
+    </article>
+    <article class="card card-padded">
+      <h3>Rich History</h3>
+      <p>Bunce Island, Freedom history, Krio culture. A nation of unity and resilience.</p>
+    </article>
+    <article class="card card-padded">
+      <h3>Wildlife and Nature</h3>
+      <p>Tacugama chimps, Gola rainforest, green mountains touching the blue sky.</p>
+    </article>
+  </div>
+
+  <section class="cta-section">
+    <h3>Plan Your Trip Today</h3>
+    <p>15 curated destinations across Sierra Leone. All information in one place.</p>
+    <a href="./contact.html" class="btn cta-btn">Contact Us</a>
+  </section>
+</main>
 
 <footer>
   <p>&copy; 2026 Salone Discover | WDD231 | Augustine Baimba | Sierra Leone.</p>
-  <p><a href="./index.html">Home</a> | <a href="./destinations.html" aria-current="page">Destinations</a> | <a href="./contact.html">Contact</a> | <a href="./attributions.html">Attributions</a>  <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">Project Video</a></p>
-  <p style="margin-top:0.5rem; font-size:0.9rem;">Green - Agriculture | White - Unity | Blue - Atlantic Ocean</p>
+  <p><a href="./index.html">Home</a> | <a href="./destinations.html">Destinations</a> | <a href="./contact.html">Contact</a> | <a href="./attributions.html">Attributions</a> | <a href="https://www.loom.com/share/YOUR_LOOM_LINK" target="_blank">Project Video</a></p>
+  <p class="flag-meaning">Green - Agriculture | White - Unity | Blue - Atlantic Ocean</p>
   <p><span id="currentyear"></span> | <span id="lastModified"></span></p>
 </footer>
-<script>
-function filterPlaces(cat){const cards=document.querySelectorAll('#destinations-container .card');cards.forEach(card=>{const badge=card.querySelector('span').textContent;if(cat==='all'||badge===cat)card.style.display='block';else card.style.display='none';});}
-</script>
 </body>
 </html>
-

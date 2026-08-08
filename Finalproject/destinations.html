@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Destinations | Salone Discover</title>
-<link rel="icon" href="images/logo.webp">
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/base.css">
-<link rel="stylesheet" href="styles/large.css">
-<script type="module" src="scripts/main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations | Salone Discover</title>
+  <meta name="description" content="Explore 15 destinations in Sierra Leone - beaches, history, wildlife. Filter and discover from River Number Two to Bunce Island.">
+  <meta name="author" content="Augustine Baimba">
+  <meta property="og:title" content="Destinations - 15 Places to Explore in Sierra Leone">
+  <meta property="og:description" content="Browse 15 curated destinations in Sierra Leone. Filter by beaches, history, and wildlife with details and best time to visit.">
+  <meta property="og:image" content="https://baimba0891.github.io/wdd231/Finalproject/images/rivertwo.webp">
+  <meta property="og:url" content="https://baimba0891.github.io/wdd231/Finalproject/destinations.html">
+  <link rel="icon" href="images/logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script type="module" src="scripts/main.js"></script>
 </head>
 <body>
 <header>
@@ -23,39 +32,35 @@
   </nav>
 </header>
 <main>
-<section class="hero" style="padding:1.5rem;">
+<section class="hero hero-narrow">
 <div><h1>Explore 15 Destinations</h1><p>From white sand beaches to green rainforests - Green White Blue.</p></div>
-<div style="text-align:center;"><p style="background:white; padding:1rem; border-radius:8px; border:2px solid #1EB53A;">Filter: All 15 loaded from places.json</p>
-<div style="margin-top:0.8rem;">
-<button class="btn" onclick="filterPlaces('all')">All</button>
-<button class="btn" onclick="filterPlaces('Beach')" style="background:#0072C6;color:white;">Beaches</button>
-<button class="btn" onclick="filterPlaces('History')">History</button>
-<button class="btn" onclick="filterPlaces('Wildlife')" style="background:#0072C6;color:white;">Wildlife</button>
+<div class="filter-box">
+<p class="filter-label">Filter: All 15 loaded from places.json</p>
+<div class="filter-buttons">
+<button class="btn" id="filter-all">All</button>
+<button class="btn btn-blue" id="filter-beach">Beaches</button>
+<button class="btn" id="filter-history">History</button>
+<button class="btn btn-blue" id="filter-wildlife">Wildlife</button>
 </div></div>
 </section>
-<div id="destinations-container" class="grid"><p style="grid-column:1/-1;text-align:center;padding:2rem;border:2px dashed #1EB53A;">Loading 15 destinations...</p></div>
-<dialog id="details-dialog" style="border:3px solid #1EB53A;border-radius:12px;padding:0;max-width:600px;width:90%;margin:auto;">
-<div style="padding:0;">
-<img id="dialog-image" src="" alt="" style="width:100%;height:250px;object-fit:cover;border-bottom:4px solid #0072C6;">
-<div style="padding:1.5rem;">
-<h2 id="dialog-title" style="color:#0E7A2A;"></h2>
-<p><strong style="color:#0072C6;">Location:</strong> <span id="dialog-location"></span></p>
-<p id="dialog-desc" style="margin:1rem 0;"></p>
-<p><strong>Best Time:</strong> <span id="dialog-best" style="background:#E6F2FF;padding:2px 6px;border-radius:4px;"></span></p>
-<button id="close-dialog" class="btn" style="margin-top:1rem;width:100%;background:#0072C6;color:white;">Close X</button>
+<div id="destinations-container" class="grid"><p class="loading-msg">Loading 15 destinations...</p></div>
+<dialog id="details-dialog">
+<div class="dialog-inner">
+<img id="dialog-image" src="images/logo.webp" alt="Destination image" class="dialog-img">
+<div class="dialog-content">
+<h2 id="dialog-title"></h2>
+<p><strong class="label-blue">Location:</strong> <span id="dialog-location"></span></p>
+<p id="dialog-desc" class="dialog-desc"></p>
+<p><strong>Best Time:</strong> <span id="dialog-best" class="best-badge"></span></p>
+<button id="close-dialog" class="btn btn-blue btn-full">Close X</button>
 </div></div>
 </dialog>
 </main>
 <footer>
   <p>&copy; 2026 Salone Discover | WDD231 | Augustine Baimba | Sierra Leone.</p>
-  <p><a href="./index.html">Home</a> | <a href="./destinations.html" aria-current="page">Destinations</a> | <a href="./contact.html">Contact</a> | <a href="./attributions.html">Attributions</a>  <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">Project Video</a></p>
-  <p style="margin-top:0.5rem; font-size:0.9rem;">Green - Agriculture | White - Unity | Blue - Atlantic Ocean</p>
+  <p><a href="./index.html">Home</a> | <a href="./destinations.html">Destinations</a> | <a href="./contact.html">Contact</a> | <a href="./attributions.html">Attributions</a> | <a href="https://www.loom.com/share/YOUR_LOOM_LINK" target="_blank">Project Video</a></p>
+  <p class="flag-meaning">Green - Agriculture | White - Unity | Blue - Atlantic Ocean</p>
   <p><span id="currentyear"></span> | <span id="lastModified"></span></p>
 </footer>
-<script>
-function filterPlaces(cat){const cards=document.querySelectorAll('#destinations-container .card');cards.forEach(card=>{const badge=card.querySelector('span').textContent;if(cat==='all'||badge===cat)card.style.display='block';else card.style.display='none';});}
-</script>
 </body>
 </html>
-
-

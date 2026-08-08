@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Attributions | Salone Discover</title>
+<meta name="description" content="Attributions and credits for Salone Discover - images from Unsplash, data from Ministry of Tourism, design by Augustine Baimba WDD231.">
+<meta name="author" content="Augustine Baimba">
+<meta property="og:title" content="Attributions and Credits - Salone Discover Sierra Leone">
+<meta property="og:description" content="Credits for images, data, and design used in Salone Discover final project by Augustine Baimba - Sierra Leone travel guide.">
+<meta property="og:image" content="https://baimba0891.github.io/wdd231/Finalproject/images/logo.webp">
+<meta property="og:url" content="https://baimba0891.github.io/wdd231/Finalproject/attributions.html">
 <link rel="icon" href="images/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/base.css">
 <link rel="stylesheet" href="styles/large.css">
@@ -21,22 +30,18 @@
 </nav>
 </header>
 <main>
-<h1>Attributions & Credits</h1>
-<div class="grid" style="margin-top:1rem;">
-<div class="card" style="padding:1.2rem;"><h3 style="color:#0E7A2A;">Images</h3><p>Unsplash & Pexels free license, custom flag logo Green #1EB53A White Blue #0072C6, wireframes hand-drawn by Augustine Baimba.</p></div>
-<div class="card" style="padding:1.2rem;"><h3 style="color:#0072C6;">Data</h3><p>15 destinations in data/places.json - original writing, Ministry of Tourism SL.</p></div>
-<div class="card" style="padding:1.2rem;"><h3 style="color:#0E7A2A;">Design</h3><p>Flag theme: Green header #0E7A2A, White body #FFFFFF, Blue footer #0072C6. Fonts Montserrat Lora. Responsive menu, modal dialog.</p></div>
+<h1>Attributions and Credits</h1>
+<div class="grid grid-mt">
+<div class="card card-padded"><h3 class="green-title">Images</h3><p>Unsplash and Pexels free license, custom flag logo Green #1EB53A White Blue #0072C6, wireframes hand-drawn by Augustine Baimba.</p></div>
+<div class="card card-padded"><h3 class="blue-title">Data</h3><p>15 destinations in data/places.json - original writing, Ministry of Tourism Sierra Leone and personal research.</p></div>
+<div class="card card-padded"><h3 class="green-title">Design</h3><p>Flag theme: Green header #0E7A2A, White body #FFFFFF, Blue footer #0072C6. Fonts Montserrat and Lora. Responsive menu, modal dialog, localStorage favorites.</p></div>
 </div>
 </main>
-<footer
- <p>&copy; 2026 Salone Discover | WDD231 | Augustine Baimba | Sierra Leone.</p>
-  <p><a href="./index.html">Home</a> | <a href="./destinations.html" aria-current="page">Destinations</a> | <a href="./contact.html">Contact</a> | <a href="./attributions.html">Attributions</a>  <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">Project Video</a></p>
-  <p style="margin-top:0.5rem; font-size:0.9rem;">Green - Agriculture | White - Unity | Blue - Atlantic Ocean</p>
+<footer>
+  <p>&copy; 2026 Salone Discover | WDD231 | Augustine Baimba | Sierra Leone.</p>
+  <p><a href="./index.html">Home</a> | <a href="./destinations.html">Destinations</a> | <a href="./contact.html">Contact</a> | <a href="./attributions.html">Attributions</a> | <a href="https://www.loom.com/share/YOUR_LOOM_LINK" target="_blank">Project Video</a></p>
+  <p class="flag-meaning">Green - Agriculture | White - Unity | Blue - Atlantic Ocean</p>
   <p><span id="currentyear"></span> | <span id="lastModified"></span></p>
 </footer>
-<script>
-function filterPlaces(cat){const cards=document.querySelectorAll('#destinations-container .card');cards.forEach(card=>{const badge=card.querySelector('span').textContent;if(cat==='all'||badge===cat)card.style.display='block';else card.style.display='none';});}
-</script>
 </body>
 </html>
-

@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Salone Discover</title>
+<meta name="description" content="Contact Salone Discover team for your Sierra Leone trip planning. Freetown office, 24 hour response, beach and wildlife inquiries.">
+<meta name="author" content="Augustine Baimba">
+<meta property="og:title" content="Contact Salone Discover - Plan Your Sierra Leone Trip">
+<meta property="og:description" content="Contact us to plan your trip to Sierra Leone. Freetown office, email, phone, and inquiry form for beaches and wildlife tours.">
+<meta property="og:image" content="https://baimba0891.github.io/wdd231/Finalproject/images/logo.webp">
+<meta property="og:url" content="https://baimba0891.github.io/wdd231/Finalproject/contact.html">
 <link rel="icon" href="images/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/base.css">
 <link rel="stylesheet" href="styles/large.css">
@@ -25,33 +34,29 @@
 <main>
 <section class="hero">
 <div><h1>Plan Your Trip - Contact Us</h1><p>Have questions? We reply within 24 hours. Green White Blue team ready.</p></div>
-<div style="background:white;padding:1.5rem;border-radius:10px;border-left:6px solid #1EB53A;border-bottom:6px solid #0072C6;">
-<h3 style="color:#0E7A2A;">Freetown Office</h3>
+<div class="office-card">
+<h3>Freetown Office</h3>
 <p>17 Lumley Beach Road<br>Freetown, Sierra Leone<br>Phone: +232 76 123456<br>Email: hello@salonediscover.sl</p>
 </div>
 </section>
-<div style="max-width:700px;margin:0 auto;">
-<form id="contact-form" method="get" action="thankyou.html" class="card" style="padding:2rem;">
-<h2 style="color:#0E7A2A;margin-bottom:1rem;">Send Inquiry</h2>
-<label style="display:block;margin-bottom:1rem;">Full Name* <input type="text" name="name" required placeholder="Augustine Baimba"></label>
-<label style="display:block;margin-bottom:1rem;">Email* <input type="email" name="email" required placeholder="you@example.com"></label>
-<label style="display:block;margin-bottom:1rem;">Interest <select name="interest"><option value="">Select...</option><option value="Beaches">Beaches</option><option value="History">History</option><option value="Wildlife">Wildlife</option><option value="All">All</option></select></label>
-<label style="display:block;margin-bottom:1rem;">Travel Date <input type="date" name="date"></label>
-<label style="display:block;margin-bottom:1.5rem;">Message* <textarea name="message" rows="5" required placeholder="Tell us about your dream trip..."></textarea></label>
-<button type="submit" class="btn" style="width:100%;font-size:1.1rem;padding:1rem;">Send Message</button>
-<p style="font-size:0.85rem;margin-top:0.8rem;text-align:center;">Form uses GET to thankyou.html</p>
+<div class="form-wrapper">
+<form id="contact-form" method="get" action="thankyou.html" class="card card-form">
+<h2>Send Inquiry</h2>
+<label>Full Name* <input type="text" name="name" required placeholder="Augustine Baimba"></label>
+<label>Email* <input type="email" name="email" required placeholder="you@example.com"></label>
+<label>Interest <select name="interest"><option value="">Select...</option><option value="Beaches">Beaches</option><option value="History">History</option><option value="Wildlife">Wildlife</option><option value="All">All</option></select></label>
+<label>Travel Date <input type="date" name="date"></label>
+<label>Message* <textarea name="message" rows="5" required placeholder="Tell us about your dream trip..."></textarea></label>
+<button type="submit" class="btn btn-full btn-large">Send Message</button>
+<p class="form-note">Form uses GET to thankyou.html</p>
 </form>
 </div>
 </main>
 <footer>
    <p>&copy; 2026 Salone Discover | WDD231 | Augustine Baimba | Sierra Leone.</p>
-  <p><a href="./index.html">Home</a> | <a href="./destinations.html" aria-current="page">Destinations</a> | <a href="./contact.html">Contact</a> | <a href="./attributions.html">Attributions</a>  <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">Project Video</a></p>
-  <p style="margin-top:0.5rem; font-size:0.9rem;">Green - Agriculture | White - Unity | Blue - Atlantic Ocean</p>
+  <p><a href="./index.html">Home</a> | <a href="./destinations.html">Destinations</a> | <a href="./contact.html">Contact</a> | <a href="./attributions.html">Attributions</a> | <a href="https://www.loom.com/share/YOUR_LOOM_LINK" target="_blank">Project Video</a></p>
+  <p class="flag-meaning">Green - Agriculture | White - Unity | Blue - Atlantic Ocean</p>
   <p><span id="currentyear"></span> | <span id="lastModified"></span></p>
 </footer>
-<script>
-function filterPlaces(cat){const cards=document.querySelectorAll('#destinations-container .card');cards.forEach(card=>{const badge=card.querySelector('span').textContent;if(cat==='all'||badge===cat)card.style.display='block';else card.style.display='none';});}
-</script>
 </body>
 </html>
-
